@@ -208,7 +208,7 @@ export default class Uploader {
             viewerHtml = `<li class="file-view"><i class="fa fa-eye"></i></li>`
         }
         if (!this.readonly) {
-            deleteHtml = `<li class="file-delete"><i class="fa fa-trash-o"></i></li>`
+            deleteHtml = `<li class="file-delete" id="${id}"><input type="hidden" id="attachment-${id}" name="attachments[${id}]" value="" /><i class="fa fa-trash-o"></i></li>`
         }
         let $previewCard = $(
             `<div class="jquery-uploader-card" id="${id}">
